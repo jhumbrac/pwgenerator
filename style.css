@@ -90,6 +90,9 @@ height:.5em;
   margin-top:1.5em;
   width:75%;
 }
+input[type=range]:focus {
+  outline:none;
+}
 input[type=range]::-webkit-slider-thumb {
 -webkit-appearance: none;
 appearance: none;
@@ -117,15 +120,24 @@ button {
   border:none;
   color: #084d42;
   cursor:pointer;
-  display:inline-block;
+  float: left;
   font-size: 1em;
-  margin-top: 2em;
+  margin: 2em 0 0;
   outline:none;
-  padding:1em 2em;
+  padding: 1em .5em;
+  width: 49%;
+}
+#reset {
+    background:#084d42;
+    color:#0accaf;
+    float:right;
 }
 button:hover {
-background:#084d42;
-color:#0accaf;
+  background:#084d42;
+  color:#0accaf;
+}
+#reset:hover {
+  background: rgba(8, 77, 66, .8);
 }
 input[type=checkbox] {
   visibility:hidden;
@@ -173,8 +185,14 @@ background-color: transparent;
 .checkbox-label input:checked ~ .checkbox-custom:before {
   border: 2px solid #fff;
 }
-label:after, form div:after {
+label:after, form div:after, .wrapper:after {
   clear:both;
   content:"";
   display:block;
+}
+@media only screen and (max-width:600px) {
+  #result { font-size:18px;}
+  button {
+    width:100%;
+  }
 }

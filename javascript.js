@@ -14,6 +14,7 @@ var lowercase = document.getElementById('lowercase');
 var numbers = document.getElementById('numbers');
 var special = document.getElementById('special');
 var generate = document.getElementById('submit');
+var reset = document.getElementById('reset');
 var clipboard = document.getElementById('clipboard');
 
 var randomFunc = {
@@ -83,3 +84,9 @@ clipboard.addEventListener('click', ()=>{
     
     alert('Password copied to clipboard');
 });
+
+reset.addEventListener('click',()=> {
+    sliderOutput.textContent = 8;
+    result.textContent = '';
+
+})
